@@ -45,13 +45,7 @@ gcloud compute firewall-rules create default-allow-http
 		--target-tags 'http-server'
 		
 ###Allow HTTPS traffic
-gcloud compute firewall-rules create default-allow-https 
-		--direction 'INGRESS'
-		--network 'default'
-		--action 'ALLOW'
-		--rules 'tcp:443'
-		--source-ranges '0.0.0.0/0' 
-		--target-tags 'https-server'
+gcloud compute firewall-rules create default-allow-https --direction 'INGRESS' --network 'default' --action 'ALLOW' --rules 'tcp:443' --source-ranges '0.0.0.0/0' --target-tags 'https-server'
 		
 
 3. Create a custom virtual machine
